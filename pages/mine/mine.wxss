@@ -1,0 +1,4 @@
+/* pages/mine/mine.wxss */
+.content {
+  background-color: #e6e6e6;
+}
