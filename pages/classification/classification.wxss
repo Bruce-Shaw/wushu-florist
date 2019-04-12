@@ -5,7 +5,7 @@ page {
 }
 
 .container {
-  font-size: 22rpx;
+  font-size: 28rpx;
   display: flex;
 }
 
@@ -14,31 +14,39 @@ page {
   flex-direction: column;
 }
 
-/* .leftContainer {
-  width: 25%;
-} */
+.leftScroll {
+ width: 200rpx;
+}
+
+.leftContainer {
+  text-align: center;
+  padding: 20rpx;
+  background-color: #eeeeee;
+}
 
 .itemContainer {
-  /* width: 75%; */
+  flex: 1;
   background-color: #fff;
-  margin: 2rpx auto;
+  display: flex;
+  padding: 20rpx;
+  margin-top: 2rpx;
 }
 
 .itemImg {
-  float: left;
   width: 150rpx;
   height: 160rpx;
 }
 
 .itemInfo {
-  float: right;
+  flex: 1;
   height: 140rpx;
   padding: 10rpx;
   position: relative;
 }
 
 .buyPrice {
-  position: absolute;
-  bottom: 20rpx;
+  display: block;
   color: red;
+  position: absolute;
+  bottom: 10rpx;
 }

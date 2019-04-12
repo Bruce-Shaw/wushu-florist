@@ -1,6 +1,6 @@
 <!--pages/classification/classification.wxml-->
 <view class='container'>
-  <scroll-view scroll-y>
+  <scroll-view scroll-y class='leftScroll'>
     <view class='scrollY'>
       <view class='leftContainer' wx:for='{{menuList}}' wx:key='{{item.key}}'>
         <text>{{item.name}}</text>
@@ -13,7 +13,7 @@
           <image class='itemImg' src='../../images/demo/flower.jpg'></image>
           <view class='itemInfo'>
             <text>{{item.name}}</text>
-            <view class='buyPrice'>¥{{item.price}}</view>
+            <text class='buyPrice'>¥{{item.price}}</text>
           </view>
       </view>
     </view>

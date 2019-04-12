@@ -10,7 +10,6 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json",
   "tabBar": {
     "color": "#2c2c2c",
     "selectedColor": "#d81e06",
