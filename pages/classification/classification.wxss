@@ -3,3 +3,42 @@
 page {
   background-color: #e6e6e6;
 }
+
+.container {
+  font-size: 22rpx;
+  display: flex;
+}
+
+.scrollY {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .leftContainer {
+  width: 25%;
+} */
+
+.itemContainer {
+  /* width: 75%; */
+  background-color: #fff;
+  margin: 2rpx auto;
+}
+
+.itemImg {
+  float: left;
+  width: 150rpx;
+  height: 160rpx;
+}
+
+.itemInfo {
+  float: right;
+  height: 140rpx;
+  padding: 10rpx;
+  position: relative;
+}
+
+.buyPrice {
+  position: absolute;
+  bottom: 20rpx;
+  color: red;
+}

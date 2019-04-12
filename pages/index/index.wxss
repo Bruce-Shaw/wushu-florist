@@ -4,7 +4,6 @@ page {
 
 .container {
   font-size: 22rpx;
-  padding: 0;
 }
 
 .headerImg {
