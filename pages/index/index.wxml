@@ -1,13 +1,30 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view class='container'>
+  <scroll-view scroll-y style='height:{{scroll_height}}rpx'>
+    <image class='headerImg' src='../../images/demo/indexbg.jpg'></image>
+    <view class='btnView'>
+      <view class='btnItem'>
+        <image class='btnImg' src='../../images/优惠券.png'></image>
+        <text>优惠券</text>
+      </view>
+      <view class='btnItem'>
+        <image class='btnImg' src='../../images/快速买单.png'></image>
+        <text>快速买单</text>
+      </view>
+    </view>
+    <view class='titleView'>—— 全部商品 ——</view>
+    <view class='scrollY'>
+      <view class='itemContainer' wx:for='{{indexList}}' wx:key='{{item.id}}'>
+        <view class='itemView'>
+          <image class='itemImg' src='../../images/demo/flower.jpg'></image>
+          <view class='itemInfo'>
+            <text>{{item.name}}</text>
+            <view class='buyView'>
+              <view class='buyPrice'>¥{{item.price}}</view>
+              <text class='buyText'>购买</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
 </view>

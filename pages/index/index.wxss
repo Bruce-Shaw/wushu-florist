@@ -1,21 +1,85 @@
-/**index.wxss**/
-.userinfo {
+page {
+  background-color: #e6e6e6;
+}
+
+.container {
+  font-size: 22rpx;
+  padding: 0;
+}
+
+.headerImg {
+  width: 100%;
+}
+
+.btnView {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnItem {
+  background: #fff;
+  width: 49.5%;
+  height: 100rpx;
+  text-align: center;
+  padding: 10rpx 0;
+}
+
+.btnImg {
+  display: block;
+  width: 64rpx;
+  height: 64rpx;
+  margin: 0 auto;
+}
+
+.titleView {
+  text-align: center;
+  margin: 24rpx 0 12rpx;
+  background-color: #e6e6e6;
+}
+
+.scrollY {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.itemContainer {
+  background-color: #fff;
+  margin: 12rpx auto;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.itemView {
+  overflow: hidden;
 }
 
-.usermotto {
-  margin-top: 200px;
+.itemImg {
+  float: left;
+  width: 190rpx;
+  height: 200rpx;
+}
+
+.itemInfo {
+  float: right;
+  width: 470rpx;
+  height: 160rpx;
+  padding: 20rpx;
+  position: relative;
+}
+
+.buyView {
+  width: 470rpx;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20rpx;
+}
+
+.buyPrice {
+  padding: 10rpx 0;
+  color: red;
+}
+
+.buyText {
+  padding: 10rpx 18rpx;
+  background-color: red;
+  color: #fff;
 }
