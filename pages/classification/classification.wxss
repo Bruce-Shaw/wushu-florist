@@ -7,21 +7,35 @@ page {
 .container {
   font-size: 28rpx;
   display: flex;
+  position: relative;
+}
+
+.leftContainer {
+ width: 200rpx;
+ position: fixed;
+ left: 0;
+ top: 0;
+}
+
+.leftItem {
+  text-align: center;
+  padding: 20rpx;
+  background-color: #eeeeee;
+  margin-bottom: 2rpx;
+}
+
+.leftItemSelect {
+  text-align: center;
+  padding: 20rpx;
+  background-color: #fff;
+  margin-bottom: 2rpx;
 }
 
 .scrollY {
   display: flex;
   flex-direction: column;
-}
-
-.leftScroll {
- width: 200rpx;
-}
-
-.leftContainer {
-  text-align: center;
-  padding: 20rpx;
-  background-color: #eeeeee;
+  position: relative;
+  left: 200rpx;
 }
 
 .itemContainer {

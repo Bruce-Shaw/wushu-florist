@@ -1,5 +1,41 @@
-/* pages/mine/mine.wxss */
-
 page {
   background-color: #e6e6e6;
+}
+
+.container {
+  font-size: 22rpx;
+}
+
+.header {
+  width: 90%;
+  margin: 20rpx auto;
+  background-color: #fff;
+  padding: 20rpx;
+  border-radius: 10rpx;
+}
+
+.userView {
+  display: flex;
+  align-items: center;
+}
+
+.userImg {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+
+.infoView {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rpx;
+}
+
+.infoItem {
+  width: 33.33%;
+  text-align: center;
+}
+
+.infoLable {
+  margin-top: 10rpx;
 }

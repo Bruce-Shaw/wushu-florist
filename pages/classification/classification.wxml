@@ -1,19 +1,23 @@
 <!--pages/classification/classification.wxml-->
-<view class='container'>
-  <scroll-view scroll-y class='leftScroll'>
-    <view class='scrollY'>
-      <view class='leftContainer' wx:for='{{menuList}}' wx:key='{{item.key}}'>
-        <text>{{item.name}}</text>
-      </view>
+<view class="container">
+  <view class="leftContainer">
+    <view
+      class="{{curMenu === item.key ? 'leftItemSelect' : 'leftItem'}}"
+      wx:for="{{menuList}}"
+      wx:key="{{item.key}}"
+      bindtap="changeMenu"
+      data-key="{{item.key}}"
+    >
+      <text>{{item.name}}</text>
     </view>
-  </scroll-view>
+  </view>
   <scroll-view scroll-y>
-    <view class='scrollY'>
-      <view class='itemContainer' wx:for='{{dataList}}' wx:key='{{item.id}}'>
-          <image class='itemImg' src='../../images/demo/flower.jpg'></image>
-          <view class='itemInfo'>
+    <view class="scrollY">
+      <view class="itemContainer" wx:for="{{dataList}}" wx:key="{{item.id}}">
+          <image class="itemImg" src="../../images/demo/flower.jpg"></image>
+          <view class="itemInfo">
             <text>{{item.name}}</text>
-            <text class='buyPrice'>¥{{item.price}}</text>
+            <text class="buyPrice">¥{{item.price}}</text>
           </view>
       </view>
     </view>

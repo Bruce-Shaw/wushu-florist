@@ -1,2 +1,22 @@
-<!--pages/mine/mine.wxml-->
-<view class='content'>我的</view>
+<view class="container">
+  <view class="header">
+    <view class="userView">
+      <image class="userImg" src="../../images/demo/admin.png" />
+      <text>测试用户</text>
+    </view>
+    <view class="infoView">
+      <view class="infoItem">
+        <view>0</view>
+        <view class="infoLable">订单</view>
+      </view>
+      <view class="infoItem">
+        <view>¥0</view>
+        <view class="infoLable">余额</view>
+      </view>
+      <view class="infoItem">
+        <view>0张</view>
+        <view class="infoLable">优惠劵</view>
+      </view>
+    </view>
+  </view>
+</view>

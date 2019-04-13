@@ -1,5 +1,68 @@
-/* pages/store/store.wxss */
-
 page {
   background-color: #e6e6e6;
+}
+
+.container {
+  font-size: 22rpx;
+}
+
+.headerImg {
+  width: 100%;
+}
+
+.titleView {
+  padding: 40rpx 0 40rpx 30rpx;
+  background-color: #fff;
+  font-size: 32rpx;
+}
+
+.navView {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 1rpx;
+  padding: 30rpx 0;
+}
+
+.navImg {
+  width: 46rpx;
+  height: 40rpx;
+  padding: 0 30rpx;
+}
+
+.contactView {
+  display: flex;
+}
+
+.contactImg {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 0 20rpx;
+}
+
+.labelView {
+  margin-top: 10rpx;
+  background-color: #fff;
+  font-size: 28rpx;
+  padding: 30rpx;
+}
+
+.serviceView {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
+.serviceItem {
+  width: 33.33%;
+  display: flex;
+  align-items: center;
+  height: 40rpx;
+  padding: 20rpx 0;
+}
+
+.serviceImg {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 30rpx;
 }
