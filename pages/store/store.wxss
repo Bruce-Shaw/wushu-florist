@@ -2,6 +2,11 @@ page {
   background-color: #e6e6e6;
 }
 
+.flexCenter {
+  display: flex;
+  align-items: center;
+}
+
 .container {
   font-size: 22rpx;
 }
@@ -17,15 +22,14 @@ page {
 }
 
 .navView {
-  display: flex;
-  align-items: center;
+  justify-content: space-between;
   background-color: #fff;
   margin-top: 1rpx;
   padding: 30rpx 0;
 }
 
 .navImg {
-  width: 46rpx;
+  width: 38rpx;
   height: 40rpx;
   padding: 0 30rpx;
 }
@@ -55,8 +59,6 @@ page {
 
 .serviceItem {
   width: 33.33%;
-  display: flex;
-  align-items: center;
   height: 40rpx;
   padding: 20rpx 0;
 }

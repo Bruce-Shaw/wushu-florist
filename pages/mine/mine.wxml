@@ -19,4 +19,30 @@
       </view>
     </view>
   </view>
+  <view class="optionView">
+    <view class="optionItem">
+      <image class="optionImg" src="../../images/快速买单.png" />
+      <view>快速买单</view>
+    </view>
+    <view class="optionItem">
+      <image class="optionImg" src="../../images/快速买单.png" />
+      <view>余额充值</view>
+    </view>
+    <view class="optionItem">
+      <image class="optionImg" src="../../images/快速买单.png" />
+      <view>账号设置</view>
+    </view>
+  </view>
+  <view class="optionView">
+    <view class="optionItem">
+      <image class="optionImg" src="../../images/快速买单.png" />
+      <view>拼团订单</view>
+    </view>
+    <view class="optionItem">
+
+    </view>
+    <view class="optionItem">
+
+    </view>
+  </view>
 </view>
