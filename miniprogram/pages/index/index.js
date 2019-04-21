@@ -1,9 +1,5 @@
 const db = wx.cloud.database();
 
-const {
-  congfigIndex
-} = require('../../utils/config.js');
-
 Page({
 
   /**
@@ -11,13 +7,13 @@ Page({
    */
   data: {
     scroll_height: 0,
-    indexList: congfigIndex.indexList,
+    indexList: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     const windowHeight = wx.getSystemInfoSync().windowHeight; // 屏幕的高度
     const windowWidth = wx.getSystemInfoSync().windowWidth; // 屏幕的宽度
     this.setData({
@@ -25,41 +21,25 @@ Page({
     });
     this.getData();
   },
-  getData: function(pageNow=1, pageSize=10, key) {
-    // try {
-    //   db.collection('wushu-florist')
-    //     .skip(pageNow)
-    //     .limit(pageSize) // 限制返回数量为 10 条
-    //     .get({
-    //       success: function(res) {
-    //         console.log(res)
-    //         that.data.topics = res.data;
-    //         // that.setData({
-    //         //   topics: that.data.topics,
-    //         // })
-    //         wx.hideNavigationBarLoading(); //隐藏加载
-    //         wx.stopPullDownRefresh();
-    //       },
-    //       fail: function(event) {
-    //         wx.hideNavigationBarLoading(); //隐藏加载
-    //         wx.stopPullDownRefresh();
-    //       }
-    //     })
-    // } catch (e) {
-    //   wx.hideNavigationBarLoading(); //隐藏加载
-    //   wx.stopPullDownRefresh();
-    //   console.error(e);
-    // }
-
-    wx.cloud.callFunction({
-      name: 'getData',
-      data: { pageNow, pageSize, key },
+  getData: function (key) {
+    db.collection('wushu-florist').where({
+      level: 1
+    }).get({
       success: res => {
-        console.log(res)
+        this.setData({ indexList: res.data });
       },
       fail: err => {
-        console.error(err)
+        wx.showToast({
+          icon: 'none',
+          title: '查询记录失败'
+        })
+        console.error('[数据库] [查询记录] 失败：', err)
       }
+    })
+  },
+  jumpDetail: function(e) {
+    wx.navigateTo({
+      url: '../detail/detail?id=' + e.currentTarget.dataset['id'],
     })
   }
 })

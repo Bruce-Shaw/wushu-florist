@@ -5,8 +5,8 @@ cloud.init()
 const db = cloud.database()
 // 云函数入口函数
 exports.main = async(event, context) => {
-  console.log('event', event)
-  console.log('context', context)
+  console.log('1event', event)
+  console.log('1context', context)
   try {
     return await db.collection('wushu-florist')
       .skip(pageNow)

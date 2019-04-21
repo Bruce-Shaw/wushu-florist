@@ -1,0 +1,10 @@
+<view>
+  <image src="{{curData.image}}" class="scrollImage" />
+  <view class="content">  
+    <view class="infoView">
+      <text>{{curData.name}}</text>
+      <text>¥{{curData.price}}</text>
+    </view>
+    <view>简介：123123123123</view>
+  </view>
+</view>

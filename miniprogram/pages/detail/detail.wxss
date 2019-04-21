@@ -1,0 +1,12 @@
+.scrollImage {
+  width: 100%;
+}
+
+.content {
+  padding: 0 20rpx;
+}
+
+.infoView {
+  display: flex;
+  justify-content: space-between;
+}

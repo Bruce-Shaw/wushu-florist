@@ -1,11 +1,11 @@
 <view class="container">
   <scroll-view scroll-y style="height:{{scroll_height}}rpx">
     <image class="headerImg" src="../../images/demo/indexbg.jpg" />
-    <view class="titleView">無束花艺</view>
+    <view class="titleView">{{storeInfo.name}}</view>
     <view class="navView flexCenter">
       <view class="flexCenter" bindtap='showLocation'>
         <image class="navImg" src="../../images/定位.png" />
-        <view class="navText">成都锦华路万达广场</view>
+        <view class="navText">{{storeInfo.address}}</view>
       </view>
       <view class="contactView">
         <image class="contactImg" src="../../images/电话.png" bindtap='callPhone' />
