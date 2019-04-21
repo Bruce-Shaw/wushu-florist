@@ -1,12 +1,34 @@
-.scrollImage {
-  width: 100%;
+page {
+  background-color: #e6e6e6;
 }
 
-.content {
-  padding: 0 20rpx;
+.container {
+  font-size: 22rpx;
+}
+
+.scrollImage {
+  width: 100%;
 }
 
 .infoView {
   display: flex;
   justify-content: space-between;
+  background-color: #fff;
+  padding: 20rpx;
+   font-size: 28rpx;
+}
+
+.infoPrice {
+  color: red;
+}
+
+.content {
+  margin-top: 2rpx;
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.imgView {
+  text-align: center;
+  margin-top: 20rpx;
 }

@@ -9,7 +9,12 @@
       </view>
       <view class="contactView">
         <image class="contactImg" src="../../images/电话.png" bindtap='callPhone' />
-        <image class="contactImg" src="../../images/微信.png" />
+        <image class="contactImg" src="../../images/微信.png" bindtap='openModal' />
+        <modal hidden="{{showModal}}" title="我们的微信" confirm-text="确定" cancel-text="取消" bindcancel="closeModal" bindconfirm="closeModal">
+          <view style="text-align:center">
+            <text>{{storeInfo.weChat}}</text>
+          </view>
+        </modal>
       </view>
     </view>
     <view class="labelView">门店服务</view>

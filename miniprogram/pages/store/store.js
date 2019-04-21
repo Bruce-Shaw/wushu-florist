@@ -8,6 +8,7 @@ Page({
     scroll_height: 0,
     serviceList: storeIconConfig,
     storeInfo,
+    showModal: true,
   },
 
   /**
@@ -40,5 +41,11 @@ Page({
       fail: function(res) {},
       complete: function(res) {},
     })
+  },
+  closeModal: function() {
+    this.setData({ showModal: true });
+  },
+  openModal: function() {
+    this.setData({ showModal: false });
   }
 })

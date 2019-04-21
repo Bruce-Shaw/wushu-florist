@@ -15,7 +15,8 @@ export const menuConfig = [{
 export const storeInfo = {
   name: '無束花艺',
   address: '成都锦华路万达广场',
-  phone: '18502882846'
+  phone: '18502882846',
+  weChat: 'Leeruiruiruirui'
 };
 
 // 门店服务

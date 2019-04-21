@@ -1,10 +1,13 @@
-<view>
+<view class="container">
   <image src="{{curData.image}}" class="scrollImage" />
-  <view class="content">  
-    <view class="infoView">
-      <text>{{curData.name}}</text>
-      <text>¥{{curData.price}}</text>
+  <view class="infoView">
+    <text class="infoName">{{curData.name}}</text>
+    <text class="infoPrice">¥{{curData.price}}</text>
+  </view>
+  <view class="content">
+    <view>简介：{{curData.description}}</view>
+    <view wx:for="{{curData.imgs}}" wx:key="{{item}}" class="imgView">
+      <image src="{{item}}" style="width:{{imgWidth}}rpx;height:{{imgHeight}}rpx"/>
     </view>
-    <view>简介：123123123123</view>
   </view>
 </view>

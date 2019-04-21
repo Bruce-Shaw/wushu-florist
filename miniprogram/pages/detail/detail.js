@@ -6,6 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    imgWidth: '',
+    imgHeight: '',
     curData: {},
   },
 
@@ -14,6 +16,10 @@ Page({
    */
   onLoad: function (options) {
     this.getDetailById(options.id);
+    const windowWidth = wx.getSystemInfoSync().windowWidth; // 屏幕的宽度
+    const imgWidth = windowWidth - 100;
+    const imgHeight = Math.ceil(imgWidth / 3 * 4);
+    this.setData({ imgWidth, imgHeight });
   },
   getDetailById: function (id) {
     db.collection('wushu-florist').where({
@@ -21,7 +27,15 @@ Page({
     }).get({
       success: res => {
         if (res.data.length) {
-          this.setData({ curData: res.data[0] });
+          const params = res.data[0];
+          if (Object.prototype.hasOwnProperty.call(params, 'imgs')) {
+            try {
+              params.imgs = params.imgs.split(',');
+            } catch(e) {
+              console.log(e);
+            }
+          }
+          this.setData({ curData: params });
         }
       },
       fail: err => {
